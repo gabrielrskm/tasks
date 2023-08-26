@@ -4,7 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [TaskModule,
-    MongooseModule.forRoot('mongodb+srv://gaby:gabrielleon@cluster0.3chz7.mongodb.net/taskdb?retryWrites=true&w=majority')
+    MongooseModule.forRoot(process.env.MONGO)
   ],
 })
 export class AppModule {}
